@@ -13,7 +13,6 @@
     <security:http pattern="/css/**" security="none"/>
     <security:http pattern="/img/**" security="none"/>
     <security:http pattern="/plugins/**" security="none"/>
-
     <!--
     	配置具体的规则
     	auto-config="true"	不用自己编写登录的页面，框架提供默认登录页面
@@ -29,12 +28,11 @@
                 login-processing-url="/login.do"
                 default-target-url="/index.jsp"
                 authentication-failure-url="/failer.jsp"
-                authentication-failure-forward-url="/pages/main.jsp"
+                authentication-success-forward-url="/pages/main.jsp"
         />
 
         <!-- 关闭跨域请求 -->
         <security:csrf disabled="true"/>
-
         <!-- 退出 -->
         <security:logout invalidate-session="true" logout-url="/logout.do" logout-success-url="/login.jsp" />
 
@@ -43,8 +41,8 @@
     <!-- 切换成数据库中的用户名和密码 -->
     <security:authentication-manager>
         <security:authentication-provider user-service-ref="userService">
-            <!-- 配置加密的方式
-            <security:password-encoder ref="passwordEncoder"/>-->
+            <!-- 配置加密的方式 -->
+            <security:password-encoder ref="passwordEncoder"/>
         </security:authentication-provider>
     </security:authentication-manager>
 

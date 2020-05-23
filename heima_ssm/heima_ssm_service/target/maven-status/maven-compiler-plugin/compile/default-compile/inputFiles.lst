@@ -1,6 +1,10 @@
 D:\Idea-workplace\heima_ssm\heima_ssm_service\src\main\java\com\itheima\ssm\service\impl\OrdersServiceImpl.java
 D:\Idea-workplace\heima_ssm\heima_ssm_service\src\main\java\com\itheima\ssm\service\IOrdersService.java
 D:\Idea-workplace\heima_ssm\heima_ssm_service\src\main\java\com\itheima\ssm\service\IProductService.java
+D:\Idea-workplace\heima_ssm\heima_ssm_service\src\main\java\com\itheima\ssm\service\IRoleService.java
 D:\Idea-workplace\heima_ssm\heima_ssm_service\src\main\java\com\itheima\ssm\service\impl\UserServiceImpl.java
 D:\Idea-workplace\heima_ssm\heima_ssm_service\src\main\java\com\itheima\ssm\service\impl\ProductServiceImpl.java
+D:\Idea-workplace\heima_ssm\heima_ssm_service\src\main\java\com\itheima\ssm\service\IPermissionService.java
+D:\Idea-workplace\heima_ssm\heima_ssm_service\src\main\java\com\itheima\ssm\service\impl\PermissionServiceImpl.java
+D:\Idea-workplace\heima_ssm\heima_ssm_service\src\main\java\com\itheima\ssm\service\impl\RoleServiceImpl.java
 D:\Idea-workplace\heima_ssm\heima_ssm_service\src\main\java\com\itheima\ssm\service\IUserService.java
