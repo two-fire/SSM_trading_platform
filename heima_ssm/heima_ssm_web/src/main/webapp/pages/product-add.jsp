@@ -147,7 +147,6 @@
 							<textarea class="form-control" rows="3" placeholder="其他信息"
 								name="productDesc"></textarea>
 						</div>
-
 					</div>
 				</div>
 				<!--订单信息/--> <!--工具栏-->

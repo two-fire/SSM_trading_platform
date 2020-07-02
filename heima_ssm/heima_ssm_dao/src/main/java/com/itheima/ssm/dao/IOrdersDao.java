@@ -1,13 +1,13 @@
 package com.itheima.ssm.dao;
 
 import com.itheima.ssm.domain.Member;
+import com.itheima.ssm.domain.Order;
 import com.itheima.ssm.domain.Orders;
 import com.itheima.ssm.domain.Product;
-import org.apache.ibatis.annotations.One;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
 public interface IOrdersDao {
@@ -35,4 +35,9 @@ public interface IOrdersDao {
             @Result(property = "member", column = "memberId",javaType = Member.class,one = @One(select = "com.itheima.ssm.dao.IMemberDao.findById"))
     })
     public Orders findById(Integer ordersId) throws Exception;
+
+
+    @Insert("insert into orders(orderNum,orderTime,orderDesc,productId,orderStatus,memberId) values(#{orderNum},#{orderTime},#{orderDesc},#{productId},#{orderStatus},#{memberId})")
+    //void placeOrder(String orderNum, Timestamp orderTime, String orderDesc, Integer productId, Integer orderStatus, Integer memberId);
+    void placeOrder(Order order);
 }

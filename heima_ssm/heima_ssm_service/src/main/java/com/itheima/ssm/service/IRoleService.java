@@ -1,5 +1,6 @@
 package com.itheima.ssm.service;
 
+import com.itheima.ssm.domain.Permission;
 import com.itheima.ssm.domain.Role;
 import org.apache.ibatis.annotations.Many;
 import org.apache.ibatis.annotations.Result;
@@ -23,4 +24,8 @@ public interface IRoleService {
     Role findById(Integer roleId) throws Exception;
 
     void deleteRoleById(Integer roleId) throws Exception;
+
+    List<Permission> findOtherPermissions(Integer roleId) throws Exception;
+
+    void addPermissionToRole(Integer roleId, Integer[] permissionIds) throws Exception;
 }

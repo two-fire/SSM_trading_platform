@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.annotation.security.RolesAllowed;
 import java.util.List;
 
 @Controller
@@ -25,6 +26,7 @@ public class ProductController {
 
     //查询全部产品
     @RequestMapping("/findAll.do")
+    @RolesAllowed("ROOT")
     public ModelAndView findAll() throws Exception {
         ModelAndView mv = new ModelAndView();
         List<Product> ps = productService.findAll();

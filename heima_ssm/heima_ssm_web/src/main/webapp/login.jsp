@@ -57,7 +57,7 @@
 					<!-- /.col -->
 				</div>
 			</form>
-
+<%--			<a href="${pageContext.request.contextPath}/register.jsp">注册</a><br>--%>
 			<a href="#">忘记密码</a><br>
 
 

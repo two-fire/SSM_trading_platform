@@ -1,5 +1,6 @@
 package com.itheima.ssm.dao;
 
+import com.itheima.ssm.domain.Permission;
 import com.itheima.ssm.domain.Role;
 import org.apache.ibatis.annotations.*;
 
@@ -32,6 +33,9 @@ public interface IRoleDao {
     })
     Role findById(Integer roleId);
 
+    @Select("select * from permission where id not in (select permissionId from role_permission where roleId=#{roleId})")
+    List<Permission> findOtherPermissions(Integer roleId);
+
     @Delete("delete from users_role where roleId=#{roleId}")
     void deleteFromUser_RoleByRoleId(Integer roleId) throws Exception;
     @Delete("delete from role_permission where roleId=#{roleId}")
@@ -40,4 +44,6 @@ public interface IRoleDao {
     @Delete("delete from role where id=#{roleId}")
     void deleteRoleById(Integer roleId) throws Exception;
 
+    @Insert("insert into role_permission(roleId,permissionId) values(#{roleId},#{permissionId})")
+    void addPermissionToRole(@Param("roleId") Integer roleId, @Param("permissionId")Integer permissionId);
 }

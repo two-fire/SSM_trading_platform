@@ -27,6 +27,27 @@ public class UserServiceImpl implements IUserService {
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Override
+    public void register(UserInfo userInfo) throws Exception {
+        //密码加密
+        userInfo.setPassword(bCryptPasswordEncoder.encode(userInfo.getPassword()));
+        userDao.register(userInfo);
+    }
+
+    @Override
+    public List<Role> findOtherRoles(Integer userId) throws Exception {
+        return userDao.findOtherRoles(userId);
+    }
+
+    @Override
+    public void addRoleToUser(Integer userId, Integer[] roleIds) {
+
+        for(Integer roleId:roleIds){
+            userDao.addRoleToUser(userId,roleId);
+        }
+    }
+
+
+    @Override
     public UserInfo findById(Integer id) throws Exception {
 
         return userDao.findById(id);

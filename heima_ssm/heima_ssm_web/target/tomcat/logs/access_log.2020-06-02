@@ -1,0 +1,6 @@
+0:0:0:0:0:0:0:1 - - [02/Jun/2020:00:00:23 +0800] "GET /heima_ssm_web/pages/product-add.jsp HTTP/1.1" 200 14068 http-bio-8080-exec-6 100
+0:0:0:0:0:0:0:1 - - [02/Jun/2020:00:00:57 +0800] "GET /heima_ssm_web/product/findAll.do HTTP/1.1" 200 38136 http-bio-8080-exec-6 53
+0:0:0:0:0:0:0:1 - - [02/Jun/2020:00:01:12 +0800] "GET /heima_ssm_web/role/findAll.do HTTP/1.1" 200 16062 http-bio-8080-exec-6 138
+0:0:0:0:0:0:0:1 - - [02/Jun/2020:00:02:15 +0800] "GET /heima_ssm_web/role/findAll.do HTTP/1.1" 200 16062 http-bio-8080-exec-7 20
+0:0:0:0:0:0:0:1 - - [02/Jun/2020:00:02:17 +0800] "GET /heima_ssm_web/user/findAll.do HTTP/1.1" 200 18204 http-bio-8080-exec-7 20
+0:0:0:0:0:0:0:1 - - [02/Jun/2020:00:04:34 +0800] "GET /heima_ssm_web/permission/findAll.do HTTP/1.1" 200 16315 http-bio-8080-exec-8 143
